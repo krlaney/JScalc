@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Javascript Calculator</title>
+		<!--Metadata-->
+		<meta name="author" content="Kevin Laney" />
+		<meta name="description" content="Practice JS Calculator" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<link href="http://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css" />
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="calc.js"></script>
+		<!--<script type="text/javascript" src="jquery.js"></script>-->
+	</head>
+	<body>
+		<h1 id="main_header">Javascript Calculator</h1>
+		<div class="container">
+			<form name="inputOutput">
+				<input type="text" name="fname" id="txtbox" onkeydown="kbdPress(event)" autofocus>
+			</form>
+			<div class="row">
+				<div class="col-xs-3">
+					<button class="removal" onclick="clearForm()">Clear</button>
+					<!--<button class="operator" onclick="buttonPress('(')">()</button>-->
+					<button class="paren" id="openParen" onclick="buttonPress('(')">(</button>
+					<button class="paren" id="closeParen" onclick="buttonPress(')')">)</button>
+					<button class="operator" onclick="buttonPress('**')">^</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3">
+					<button class="number" id="9" onclick="buttonPress(9)">9</button>
+					<button class="number" id="8" onclick="buttonPress(8)">8</button>
+					<button class="number" id="7" onclick="buttonPress(7)">7</button>
+					<button class="operator" id="*" onclick="buttonPress('*')">*</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3">
+					<button class="number" id="6" onclick="buttonPress(6)">6</button>
+					<button class="number" id="5" onclick="buttonPress(5)">5</button>
+					<button class="number" id="4" onclick="buttonPress(4)">4</button>
+					<button class="operator" id="/" onclick="buttonPress('/')">&divide </button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3">
+					<button class="number" id="3" onclick="buttonPress(3)">3</button>
+					<button class="number" id="2" onclick="buttonPress(2)">2</button>
+					<button class="number" id="1" onclick="buttonPress(1)">1</button>
+					<button class="operator" id="+" onclick="buttonPress('+')">+</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3">
+					<button class="number" id="0" onclick="buttonPress(0)">0</button>
+					<button class="symbol" id="." onclick="buttonPress('.')">.</button>
+					<button class="removal" onclick="del()">Del</button>
+					<button class="operator" id="-" onclick="buttonPress('-')">-</button>
+					<button class="operator" id="equal" onclick="submit()">=</button>
+				</div>
+			</div>
+		</div>
+		<address>
+		Written by Kevin Laney
+		</address>
+	</body>
+</html>

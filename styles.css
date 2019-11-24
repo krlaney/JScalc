@@ -1,0 +1,85 @@
+/*JS Calculator*/
+body {
+}
+
+h1 {
+	color: black;
+	text-align: center;
+	border-width: 2px;
+	border-style: ridge;
+	border-color: gray;
+	margin: 5px;
+	height: 10%;
+	font-size: 5vw;
+}
+
+.container {
+	/*border-width: 2px;
+	border-style: ridge;
+	border-color: blue;*/
+	width: 240px;
+	margin: auto;
+	background-color: rgb(100, 85, 110);
+	box-shadow: 10px 10px;
+}
+
+input {
+	text-align: right;
+	padding: 5px;
+	display: inline;
+	width: 100%
+}
+
+input[type="text"]:focus {
+	border: 3px solid gray;
+}
+
+button {
+	padding: 15px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 5px 3px;
+	width: 50px;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: rgb(170, 170, 170);
+}
+
+button:hover {
+	background-color: gray;
+	color: white;
+	/*box-shadow: rgba(0, 0, 0, .25);*/
+}
+
+.number {
+	background-color: rgb(210, 210, 210);
+}
+
+.operator {
+	background-color: rgb(110, 110, 110);
+	font-size: 20px;
+	padding: 12px 10px;
+	/*cursor: not-allowed;*/
+}
+
+.removal {
+	padding: 15px 5px;
+}
+
+/*.paren {
+	margin: 5px 0px 5px 0px;
+	padding: 15px 0px;
+	background-color: green;
+}*/
+
+#equal {
+	width: 100%;
+}
+
+address {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
